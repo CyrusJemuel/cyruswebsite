@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <title>DKY Magnetic Keyboard Series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <style>
+        mark {
+            background-color: transparent;
+            font-style: italic;
+            color: yellow;
+        }
+
+        .footer-text {
+            font-style: italic;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+        <p class="navbar-brand mb-0 h1">Landing Page Demo (Bootstrap)</p>
+        <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Homepage</a>
+            <a class="nav-link" href="landingpage_css.html">Landing Page (CSS)</a>
+            <a class="nav-link" href="landingpage_bootstrap.html">Landing Page (Bootstrap)</a>
+        </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/keybintro1.jpg" style="filter: brightness(50%);" class="d-block w-100"
+                    alt="DKY Keyboard 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/keybintro2.png" style="filter: brightness(50%);" class="d-block w-100"
+                    alt="DKY Keyboard 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="position-absolute top-50 start-50 translate-middle text-center">
+        <p class="display-1" style="color: yellow;"><b>DKY 60HE</b></p>
+        <p class="lead" style="color: white">The <mark>ultimate</mark> analog gaming keyboard.</p>
+    </div>
+
+    <div class="position-absolute bottom-0 start-50 translate-middle-x display-6 p-3" style="color: yellow; opacity: 50%;">⮟</div>
+
+    <p class="display-6 p-4 text-center"><b>About Keyboard</b></p>
+    <div class="d-flex justify-content-center w-100">
+        <p class="text-center w-50"><mark>DKY 60HE</mark> is a 60% layout, hall-effect gaming keyboard that features
+            <u>magnetic
+                switches</u> instead of mechanical switches, allowing you to execute pressure-sensitive inputs through
+            magnetic
+            sensors.
+        </p>
+    </div>
+
+    <hr>
+    <hr>
+
+    <div class="d-flex flex-column align-items-center">
+        <h3>Features:</h3>
+
+        <div class="accordion w-75" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <b>Rapid Trigger Technology</b>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        - Keys release instantly the moment you move up, allowing faster inputs.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <b>Adjustable Actuation Point</b>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        - Allows keys to be registered as early as 0.1mm - 4mm.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <b>Pro-Grade Magnetic Switches</b>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        - Comes with pre-lubed Gateron Magnetic Jade switches with deep, satisfying key sounds and
+                        instantaneous key response.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center p-3">
+        <img src="images/difference.jpg" height="600" style="border-radius: 24px;">
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <table class="table table-striped w-75">
+            <thead>
+                <tr>
+                    <th scope="col">Difference</th>
+                    <th scope="col">DKY 60HE Magnetic</th>
+                    <th scope="col">Mechanical Keyboard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Actuation Point</th>
+                    <td>Adjustable, 0.1mm - 4mm</td>
+                    <td>Fixed actuation point</td>
+                </tr>
+                <tr>
+                    <th scope="row">Rapid Trigger</th>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th scope="row">Physical Wear</th>
+                    <td>100+ million keystrokes</td>
+                    <td>~50-80 million keystrokes</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tactile Feel</th>
+                    <td>Ultra-smooth linear feel</td>
+                    <td>Clicky, Linear</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+    <hr>
+
+    <p class="display-6 text-center"><b>Ready for a new faster, better gaming?</b></p>
+
+    <div class="d-flex justify-content-center">
+        <div class="w-50">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingName" placeholder="Juan Dela Cruz">
+                <label for="floatingName">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingAddress" placeholder="123 Address St.">
+                <label for="floatingAddress">Address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingNumber" placeholder="09123456789">
+                <label for="floatingNumber">Phone Number</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingEmail" placeholder="juan.dela.cruz@gmail.com">
+                <label for="floatingEmail">Email Address</label>
+            </div>
+
+            <select class="form-select" aria-label="Default select example">
+                <option selected>-- Select Keyboard Model --</option>
+                <option>DKY 60HE (Black)</option>
+                <option>DKY 60HE (White)</option>
+                <option>DKY 60HE (Cyan)</option>
+                <option>DKY 60HE (Galaxy Cosmo)</option>
+                <option>DKY 60HE (Nebula)</option>
+            </select>
+
+            <div class="d-flex justify-content-center p-4">
+                <button type="button" class="btn btn-primary btn-lg">Order Now! (₱1000 <s>₱4000</s>)</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+</body>
+
+</html>

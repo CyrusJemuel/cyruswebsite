@@ -1,0 +1,177 @@
+<!doctype html>
+<html data-bs-theme="dark">
+  <head>
+    <title>Personal Page with Bootstrap</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <p class="navbar-brand mb-0 h1">Cyrus Jemuel's Personal Page</p>
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html">Homepage</a>
+          <a class="nav-link" href="landingpage_css.html">Landing Page (CSS)</a>
+          <a class="nav-link" href="landingpage_bootstrap.html">Landing Page (Bootstrap)</a>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="d-flex flex-column p-2 justify-content-center align-items-center"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(images/background.jpg);
+        background-position: 50%;
+        background-size: 100%;
+        min-height: 50dvh;
+      "
+    >
+      <div>
+        <h1>Hi! I'm Cyrus Jemuel</h1>
+        <p class="lead">- 💻 BSIT 2nd Year Student</p>
+        <p class="lead">- 🎮 Video Gamer</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <p class="p-3 lead text-center">
+      Hello! My name is <b><u>Cyrus Jemuel Estrada</u></b
+      >. I am a BSIT-2A student who loves playing video games, rhythm games, and
+      learning new things!
+    </p>
+
+    <hr />
+
+    <p class="display-6 text-center"><b>My Hobbies:</b></p>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex flex-row gap-2">
+        <div class="card" style="width: 18rem">
+          <img
+            src="images/hobby_rhythm_game.jpg"
+            class="card-img-top"
+            alt="osu!mania 4k"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><b>Rhythm Games</b></h5>
+            <hr />
+            <p class="card-text">
+              I often play rhythm games like osu!mania 4k, maimai, Phigros, and
+              many more rhythm games to pass the time and set high scores
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <img
+            src="images/hobby_listening_to_music.png"
+            class="card-img-top"
+            alt="YouTube Music"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><b>Listening to Music</b></h5>
+            <hr />
+            <p class="card-text">
+              I frequently listen to music, it helps me calm down and vibe out
+              anytime
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <img src="images/hobby_coding.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title"><b>Coding Projects</b></h5>
+            <hr />
+            <p class="card-text">
+              I code a lot in my free time, practicing, making systems, learning
+              new concepts with frameworks like React, Bootstrap, making API
+              parsers and probability simulators, etc.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <img
+            src="images/hobby_video_games.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title"><b>Video Games</b></h5>
+            <hr />
+            <p class="card-text">
+              Aside from rhythm games, I play a lot of video games like
+              Wuthering Waves, Apex Legends, Valorant, R.E.P.O, etc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <p class="display-6 text-center">Send me a message!</p>
+
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="w-50">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingName"
+            placeholder="Juan Dela Cruz"
+          />
+          <label for="floatingName">Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingEmail"
+            placeholder="abcd@abcd.com"
+          />
+          <label for="floatingEmail">Email Address</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="floatingNum"
+            placeholder="0123456789"
+            min="0"
+          />
+          <label for="floatingNum">Phone Number</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+            style="height: 100px"
+          ></textarea>
+          <label for="floatingTextarea2">Comment</label>
+        </div>
+
+        <button class="btn btn-primary btn-lg">Send Message!</button>
+      </div>
+    </div>
+  </body>
+</html>

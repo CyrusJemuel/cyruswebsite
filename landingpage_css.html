@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DKY Magnetic Keyboard Series</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            background-color: #212529;
+            color: #dee2e6;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #495057;
+            margin: 16px auto;
+            width: 90%;
+        }
+
+        mark {
+            background-color: transparent;
+            font-style: italic;
+            color: yellow;
+        }
+
+        /* ---------- Navbar ---------- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 12px 20px;
+            background-color: #2b3035;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: normal;
+            color: white;
+        }
+
+        .navbar a {
+            color: #adb5bd;
+            text-decoration: none;
+            margin-left: 16px;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        /* ---------- Hero (auto-fading images, no JS) ---------- */
+        .hero {
+            position: relative;
+            height: 90vh;
+            min-height: 350px;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+            opacity: 0;
+            animation: fade 10s infinite;
+        }
+
+        .hero img:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        @keyframes fade {
+            0%   { opacity: 0; }
+            10%  { opacity: 1; }
+            50%  { opacity: 1; }
+            60%  { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            padding: 0 16px;
+        }
+
+        .hero-text h2 {
+            margin: 0;
+            font-size: 72px;
+            color: yellow;
+        }
+
+        .hero-text p {
+            margin: 8px 0 0;
+            font-size: 22px;
+            color: white;
+        }
+
+        .scroll-arrow {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 16px;
+            font-size: 30px;
+            color: yellow;
+            opacity: 0.5;
+        }
+
+        /* ---------- Sections ---------- */
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin: 32px 16px 16px;
+        }
+
+        .about-text {
+            width: 50%;
+            margin: 0 auto 24px;
+            text-align: center;
+        }
+
+        /* ---------- Features (accordion using <details>) ---------- */
+        .features {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .features h3 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        details {
+            border: 1px solid #495057;
+            margin-bottom: -1px;
+        }
+
+        summary {
+            cursor: pointer;
+            padding: 16px 20px;
+            font-weight: bold;
+            background-color: #2b3035;
+        }
+
+        summary:hover {
+            background-color: #343a40;
+        }
+
+        details p {
+            margin: 0;
+            padding: 16px 20px;
+        }
+
+        /* ---------- Image ---------- */
+        .image-box {
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: 600px;
+            object-fit: contain;
+            border-radius: 24px;
+        }
+
+        /* ---------- Table ---------- */
+        table {
+            width: 75%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #495057;
+        }
+
+        thead th {
+            border-bottom: 2px solid #6c757d;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #2b3035;
+        }
+
+        /* ---------- Order form ---------- */
+        .order-form {
+            width: 50%;
+            margin: 24px auto;
+        }
+
+        .order-form label {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .order-form input,
+        .order-form select {
+            display: block;
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: #dee2e6;
+            background-color: #2b3035;
+            border: 1px solid #495057;
+            border-radius: 6px;
+        }
+
+        .button-row {
+            text-align: center;
+            padding: 16px;
+        }
+
+        .order-button {
+            padding: 14px 28px;
+            font-size: 20px;
+            color: white;
+            background-color: #0d6efd;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .order-button:hover {
+            background-color: #0b5ed7;
+        }
+
+        /* ---------- Small screens ---------- */
+        @media (max-width: 768px) {
+            .about-text,
+            .features,
+            table,
+            .order-form {
+                width: 92%;
+            }
+
+            .hero-text h2 {
+                font-size: 44px;
+            }
+
+            .image-box img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Landing Page Demo (CSS)</h1>
+        <div>
+            <a href="index.html">Homepage</a>
+            <a href="landingpage_css.html">Landing Page (CSS)</a>
+            <a href="landingpage_bootstrap.html">Landing Page (Bootstrap)</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <img src="images/keybintro1.jpg" alt="DKY Keyboard 1">
+        <img src="images/keybintro2.png" alt="DKY Keyboard 2">
+
+        <div class="hero-text">
+            <h2>DKY 60HE</h2>
+            <p>The <mark>ultimate</mark> analog gaming keyboard.</p>
+        </div>
+
+        <div class="scroll-arrow">⮟</div>
+    </div>
+
+    <!-- About -->
+    <h2 class="section-title">About Keyboard</h2>
+    <p class="about-text">
+        <mark>DKY 60HE</mark> is a 60% layout, hall-effect gaming keyboard that features
+        <u>magnetic switches</u> instead of mechanical switches, allowing you to execute
+        pressure-sensitive inputs through magnetic sensors.
+    </p>
+
+    <hr>
+
+    <!-- Features -->
+    <div class="features">
+        <h3>Features:</h3>
+
+        <details open>
+            <summary>Rapid Trigger Technology</summary>
+            <p>- Keys release instantly the moment you move up, allowing faster inputs.</p>
+        </details>
+
+        <details>
+            <summary>Adjustable Actuation Point</summary>
+            <p>- Allows keys to be registered as early as 0.1mm - 4mm.</p>
+        </details>
+
+        <details>
+            <summary>Pro-Grade Magnetic Switches</summary>
+            <p>- Comes with pre-lubed Gateron Magnetic Jade switches with deep, satisfying key sounds and
+                instantaneous key response.</p>
+        </details>
+    </div>
+
+    <!-- Image -->
+    <div class="image-box">
+        <img src="images/difference.jpg" alt="Difference between magnetic and mechanical switches">
+    </div>
+
+    <!-- Comparison table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Difference</th>
+                <th>DKY 60HE Magnetic</th>
+                <th>Mechanical Keyboard</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Actuation Point</th>
+                <td>Adjustable, 0.1mm - 4mm</td>
+                <td>Fixed actuation point</td>
+            </tr>
+            <tr>
+                <th>Rapid Trigger</th>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <th>Physical Wear</th>
+                <td>100+ million keystrokes</td>
+                <td>~50-80 million keystrokes</td>
+            </tr>
+            <tr>
+                <th>Tactile Feel</th>
+                <td>Ultra-smooth linear feel</td>
+                <td>Clicky, Linear</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- Order form -->
+    <h2 class="section-title">Ready for a new faster, better gaming?</h2>
+
+    <div class="order-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Juan Dela Cruz">
+
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="123 Address St.">
+
+        <label for="number">Phone Number</label>
+        <input type="text" id="number" placeholder="09123456789">
+
+        <label for="email">Email Address</label>
+        <input type="text" id="email" placeholder="juan.dela.cruz@gmail.com">
+
+        <label for="model">Keyboard Model</label>
+        <select id="model">
+            <option selected>-- Select Keyboard Model --</option>
+            <option>DKY 60HE (Black)</option>
+            <option>DKY 60HE (White)</option>
+            <option>DKY 60HE (Cyan)</option>
+            <option>DKY 60HE (Galaxy Cosmo)</option>
+            <option>DKY 60HE (Nebula)</option>
+        </select>
+
+        <div class="button-row">
+            <button type="button" class="order-button">Order Now! (₱1000 <s>₱4000</s>)</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <center><p>© 2026 Cyrus Jemuel Estrada</p></center>
+</body>
+
+</html>
