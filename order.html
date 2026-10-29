@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Customer Registration</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -15,45 +15,55 @@
 
 <body>
 
-    <div class="d-flex justify-content-center align-items-center" style="height: 100dvh;">
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100dvh;">
         <div
-            style="border: 2px gray solid; background: rgb(33, 32, 36); padding: 20px; border-radius: 16px; width: 20%;">
+            style="border: 2px gray solid; background: rgb(33, 32, 36); padding: 20px; border-radius: 16px; width: 100%; max-width: 640px; margin: 24px 12px;">
             <center>
                 <h3>Customer Registration</h3>
             </center>
 
             <hr>
 
-            <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput"
-                    placeholder="Example input placeholder">
-            </div>
-            <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2"
-                    placeholder="Another input placeholder">
-            </div>
-            <div class="mb-3">
-                <label for="formGroupExampleInput3" class="form-label">Middle Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput3"
-                    placeholder="Another input placeholder">
-            </div>
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="salutation" class="form-label">Title</label>
+                    <select class="form-select" id="salutation">
+                        <option value="" selected disabled>Select</option>
+                        <option value="mr">Mr.</option>
+                        <option value="mrs">Mrs.</option>
+                        <option value="ms">Ms.</option>
+                        <option value="na">Not applicable</option>
+                    </select>
+                </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+                <div class="col-md-4">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
+                </div>
+                <div class="col-md-4">
+                    <label for="middleName" class="form-label">Middle Name</label>
+                    <input type="text" class="form-control" id="middleName">
+                </div>
+            </form>
 
             <hr>
 
             <form class="row g-3">
                 <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Username</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
                 </div>
                 <div class="col-12">
-                    <label for="inputPassword5" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="inputPassword5">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword">
                 </div>
             </form>
 
@@ -61,16 +71,85 @@
 
             <form class="row g-3">
                 <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Contact Number</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="contactNumber">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Email Address</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email">
                 </div>
             </form>
 
             <hr>
+
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="houseNumber" class="form-label">House Number</label>
+                    <input type="text" class="form-control" id="houseNumber">
+                </div>
+                <div class="col-md-8">
+                    <label for="street" class="form-label">Street / Village</label>
+                    <input type="text" class="form-control" id="street">
+                </div>
+                <div class="col-md-8">
+                    <label for="city" class="form-label">City / Municipality</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+                <div class="col-md-4">
+                    <label for="zip" class="form-label">Zip Code</label>
+                    <input type="text" class="form-control" id="zip">
+                </div>
+                <div class="col-md-6">
+                    <label for="state" class="form-label">State / Province</label>
+                    <input type="text" class="form-control" id="state">
+                </div>
+                <div class="col-md-6">
+                    <label for="region" class="form-label">Region</label>
+                    <input type="text" class="form-control" id="region">
+                </div>
+                <div class="col-12">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="country">
+                </div>
+            </form>
+
+            <hr>
+
+            <form class="row g-3">
+                <div class="col-12">
+                    <label for="shippingMethod" class="form-label">Shipping Method</label>
+                    <select class="form-select" id="shippingMethod">
+                        <option value="" selected disabled>Select shipping method</option>
+                        <option value="standard">Standard</option>
+                        <option value="express">Express</option>
+                        <option value="pickup">Store Pickup</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="keyboardModel" class="form-label">Keyboard Model</label>
+                    <select class="form-select" id="keyboardModel">
+                        <option value="" selected disabled>Select keyboard model</option>
+                        <option value="Black">DKY 60HE (Black)</option>
+                        <option value="White">DKY 60HE (White)</option>
+                        <option value="Cyan">DKY 60HE (Cyan)</option>
+                        <option value="Galaxy Cosmo">DKY 60HE (Galaxy Cosmo)</option>
+                        <option value="Nebula">DKY 60HE (Nebula)</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cod">
+                        <label class="form-check-label" for="cod">Cash on Delivery (COD)</label>
+                    </div>
+                </div>
+            </form>
+
+            <hr>
+
+            <div class="d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-outline-secondary" onclick="history.back()">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="history.back()">Order Now</button>
+            </div>
 
         </div>
     </div>
